@@ -5,7 +5,7 @@
 
 ## Step-by-Step Implementation
 ### Step 1: Add Users
-Each department in the 'Practice Company' has hired a department head and 2-3 new employees. All employees were created and added to the Entra ID directory. 
+Each department in the 'Practice Company' has hired a department head and 1-2 new employees. All employees were created and added to the Entra ID directory. 
 
 ## Step 2: Groups and Administrative Units
 To avoid managing individual accounts, all employees were organized into appropriate security groups (e.g., 'IT-Staff-Group', 'HR-Staff-Group'). To reduce creation time, users were auto-assigned into each group using dynamic memberships. 
