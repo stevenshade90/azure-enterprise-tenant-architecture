@@ -6,6 +6,7 @@
 ## Step-by-Step Implementation
 ### Step 1: Add Users
 Each department in the 'Practice Company' has hired a department head and 1-2 new employees. All employees were created and added to the Entra ID directory. 
+
 ![Microsoft Entra ID User Directory](./images/entra-users-list.png)
 *Figure 1: Verified roster provisioned within the Practice Company tenant directory.*
 
