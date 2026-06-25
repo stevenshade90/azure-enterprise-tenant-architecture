@@ -9,6 +9,9 @@ This repository documents the creation of a Microsoft Azure tenant designed for 
 * **Objective**: Establish the company's directory through Entra ID, implement identity security parameters, and create administrative boundaries.
 
 
+### [Phase 2: Storage Infrastructure](./02-storage-infrastructure/)
+* **Objective**: Design and provision a highly available, secure, cost-optimized, and compliant storage tier to support the `Practice Company` infrastructure. 
+
 ## Future Updates
 ### Phase 2: Storage Infrastructure
 ### Phase 3: Virtual Networking and Security
