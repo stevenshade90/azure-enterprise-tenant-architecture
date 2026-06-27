@@ -88,3 +88,19 @@ The company administration would like for more safeguards to be in place to prev
 ![Subscription-level Resource Lock](./images/storage-resource-lock.png)
 *Figure 7: A resource lock set at the subscription level, preventing current and future resources from being deleted.*
 
+### Step 4: Granting External Business Access (SAS Token)
+An external company collaborating with the `Practice Company` needs to view the resources listed in the Engineering department's storage account. `Practice Company` administration requires that the external business be able to access the files for no more than 3 days. An **SAS Token** was generated to meet the requirement, allowing and it was provisioned with a start/expiry date of 3 days. 
+
+![SAS Token Parameters](./images-storage-sas-token.png)
+*Figure 8: An SAS Token generated for an external business to connect to the Engineering department's storage account.**
+
+The SAS Token was tested in the Azure Storage Explorer app. Selecting the "open connect dialog," a name for the storage account was given and the connection string was pasted in.
+
+![Connection String](./images-storage-connection-string.png)
+*Figure 9: Entering the connection string to connect to the Engineering department's storage account.*
+
+The connection was established, and the resources in the storage account were accessible, as shown in the image below. 
+
+![Succcessful Connection to Storage Account](./images/storage-successful-connection.png)
+*Figure 10: The connection is extablished and the resources in the storage account are now accessible.* 
+
