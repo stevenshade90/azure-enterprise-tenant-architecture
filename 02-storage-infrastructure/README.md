@@ -105,3 +105,4 @@ The connection was established, and the resources in the storage account were ac
 
 *Figure 10: The connection is established and the resources in the storage account are now accessible.* 
 
+### Step 5: Data Redundancy and Blob Lifecycle Management
