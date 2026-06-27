@@ -5,7 +5,7 @@
 
 ## Step-by-Step Implementation
 ### Step 1: Automate Storage Account Creation 
-To reduce production time, a PowerShell script was created to automate the creation of a storage account for each department. To meet company requirements, the location for the storage accounts was set to `EastUs` and `LRS` was used for data redundancy and cost-effectiveness:
+To reduce production time, a PowerShell script was created to automate the creation of a storage account for each department. To meet company requirements, the location for the storage accounts was set to `EastUs` and `LRS` was used for data redundancy and cost-effectiveness.
 
 ```powershell
 $Departments = @(
@@ -30,19 +30,19 @@ foreach ($Dept in $Departments)
 ```
 *Figure 1: A PowerShell script to automate the creation of storage accounts for each department in the company.*
 
-Selecting **All Resources** will show that each storage account was created with the appropriate naming: 
+Selecting **All Resources** will show that each storage account was created with the appropriate naming.
 
 ![Storage Account Confirmation](./images/storage-all-storage-accounts.png)
 *Figure 2: Image showing the successful creation of all storage accounts created by the PowerShell script.*
 
 ### Step 2: Create Blob Containers Using Azure Storage Explorer
-Company administration would like each department to have a blob container in each storage account to hold general data. The Azure portal, however, is having some issues and won't allow the tenant administrator to create the blob containers. As a workaround, Azure Storage Explorer was installed, connected to the company's subscription, and a blob container was created for the storage accounts:
+Company administration would like each department to have a blob container in each storage account to hold general data. The Azure portal, however, is having some issues and won't allow the tenant administrator to create the blob containers. As a workaround, Azure Storage Explorer was installed, connected to the company's subscription, and a blob container was created for the storage accounts.
 
 ![Storage Explorer Blob Creation](./images/storage-se-blob-creation.png)
 
 *Figure 3: Using the Azure Storage Explorer to create blob containers for each storage account.*
 
-Oh no! The Azure portal and the Azure Storage Explorer are both having issues, and the final blob container could not be created for the IT department. As a workaround, a basic PowerShell script was executed to attempt to create the blob container:
+The Azure portal and the Storage Explorer app were having issues and the final blob couldn't be created for the IT department. As a workaround, a PowerShell script was executed to provision the blob container in the appropriate context. 
 
 ```powershell
 Connect-AzAccount
@@ -89,10 +89,10 @@ The company administration would like for more safeguards to be in place to prev
 *Figure 7: A resource lock set at the subscription level, preventing current and future resources from being deleted.*
 
 ### Step 4: Granting External Business Access (SAS Token)
-An external company collaborating with the `Practice Company` needs to view the resources listed in the Engineering department's storage account. `Practice Company` administration requires that the external business be able to access the files for no more than 3 days. An **SAS Token** was generated to meet the requirement, allowing and it was provisioned with a start/expiry date of 3 days. 
+An external company collaborating with the `Practice Company` needs to view the resources listed in the Engineering department's storage account. `Practice Company` administration requires that the external business be able to access the files for no more than 3 days. An **SAS Token** was generated to meet the requirement, restricting the vendor's timeline to exactly 3 days. 
 
 ![SAS Token Parameters](./images/storage-sas-token.png)
-*Figure 8: An SAS Token generated for an external business to connect to the Engineering department's storage account.**
+*Figure 8: An SAS Token generated for an external business to connect to the Engineering department's storage account.*
 
 The SAS Token was tested in the Azure Storage Explorer app. Selecting the "open connect dialog," a name for the storage account was given and the connection string was pasted in.
 
@@ -101,7 +101,7 @@ The SAS Token was tested in the Azure Storage Explorer app. Selecting the "open 
 
 The connection was established, and the resources in the storage account were accessible, as shown in the image below. 
 
-![Succcessful Connection to Storage Account](./images/storage-successful-connection.png)
+![Successful Connection to Storage Account](./images/storage-successful-connection.png)
 
-*Figure 10: The connection is extablished and the resources in the storage account are now accessible.* 
+*Figure 10: The connection is established and the resources in the storage account are now accessible.* 
 
